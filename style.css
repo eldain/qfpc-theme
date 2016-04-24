@@ -7,36 +7,16 @@ html {
   background-size: cover;
 }
 
-a.brand {
+body {
+  background: none;
   color: white;
+}
+
+.home-layout #title {
   font-size: 4em;
 }
 
-img#bg {
-  z-index: -1;
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img#bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
-
-#home-description {
-  display: block;
+.home-layout #description {
   text-align: center;
   font-size: 1.5em;
 }
