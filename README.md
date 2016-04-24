@@ -2,8 +2,15 @@
 
 This is a wordpress theme built from scratch
 
+## Plugins
+
+* https://github.com/tlovett1/custom-contact-forms
+* https://github.com/scottsweb/instant-search-suggest
+* https://wordpress.org/plugins/categories-images/
+
 ## Resources
 
 * https://www.siteground.com/tutorials/wordpress/wordpress_create_theme.htm
 * http://getbootstrap.com/css/#grid
 * https://developer.wordpress.org/reference/functions/get_stylesheet_directory_uri/
+* https://codex.wordpress.org/Class_Reference/WP_Query

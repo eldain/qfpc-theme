@@ -6,4 +6,20 @@
       <?= get_template_part('templates/searchform') ?>
     </div>
   </div>
+
+<?php
+if (function_exists('z_taxonomy_image_url')) {
+  $categories = get_categories();
+  foreach ( $categories as $category ){ ?>
+    <a href="<?= get_category_link( $category->cat_ID ); ?> ">
+      <img src="<?= z_taxonomy_image_url($category->term_id); ?>">
+      <span><?= $category->name ?></span>
+    </a><?php
+  }
+} else {
+  echo wp_list_categories();
+}
+?>
 </div>
+
+<?= get_template_part('templates/questionform') ?>

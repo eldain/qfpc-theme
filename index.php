@@ -15,14 +15,12 @@
 
 <?php
 global $query_string;
-
 if( strlen($query_string) > 0 ) {
   echo get_template_part('templates/search-results');
 } else {
   echo get_template_part('templates/home');
 }
 ?>
-
 <?= wp_footer(); ?>
 </body>
 </html>
