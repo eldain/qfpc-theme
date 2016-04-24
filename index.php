@@ -12,7 +12,17 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/twbs/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<?= get_template_part('templates/home') ?>
+
+<?php
+global $query_string;
+
+if( strlen($query_string) > 0 ) {
+  echo get_template_part('templates/search-results');
+} else {
+  echo get_template_part('templates/home');
+}
+?>
+
 <?= wp_footer(); ?>
 </body>
 </html>
