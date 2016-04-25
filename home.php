@@ -1,9 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head><?=  get_template_part('head'); ?></head>
+<body>
+
 <div class="home-layout container-fluid">
   <div id="title"><?= bloginfo('title'); ?></div>
   <div id="description"><?= bloginfo('description'); ?></div>
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3 ">
-      <?= get_template_part('templates/searchform') ?>
+      <?= get_template_part('searchform') ?>
     </div>
   </div>
 
@@ -22,4 +27,8 @@ if (function_exists('z_taxonomy_image_url')) {
 ?>
 </div>
 
-<?= get_template_part('templates/questionform') ?>
+<?= get_template_part('questionform') ?>
+
+<?= wp_footer(); ?>
+</body>
+</html>
