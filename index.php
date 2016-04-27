@@ -5,12 +5,34 @@
 <div class="container">
 <?#are you looking for home.php?>
 <?php if ( have_posts() ) : ?>
+  <div id="title"><?= bloginfo('title'); ?></div>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 ">
+      <?= get_template_part('searchform') ?>
+    </div>
+  </div>
+
+  <?php if ( is_category() ) : ?>
+  <div class="category-header row">
+    <?php if (function_exists('z_taxonomy_image_url')):
+      $category = get_the_category()[0]; ?>
+      <div class="category-image col-xs-4">
+        <img src="<?= z_taxonomy_image_url($category->term_id); ?>">
+        <div class="category-name"><?= $category->name ?></div>
+      </div>
+    <?php endif; ?>
+    <div class="category-description col-xs-8"><?= $category->description ?></div>
+  </div>
+  <?php endif; ?>
 
   <?php if ( is_home() && ! is_front_page() ) : ?>
     <header>
       <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
     </header>
   <?php endif; ?>
+
+
 
   <?php
   // Start the loop.
