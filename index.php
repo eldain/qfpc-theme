@@ -5,7 +5,7 @@
 <div class="container">
 <?#are you looking for home.php?>
 <?php if ( have_posts() ) : ?>
-  <div id="title"><?= bloginfo('title'); ?></div>
+  <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3 ">

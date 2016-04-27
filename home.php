@@ -4,7 +4,7 @@
 <body>
 
 <div class="home-layout container">
-  <div id="title"><?= bloginfo('title'); ?></div>
+  <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
   <div id="description"><?= bloginfo('description'); ?></div>
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3 ">
