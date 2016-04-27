@@ -14,16 +14,18 @@
   <div class="entry-content">
     <?php if (is_search() || is_category()):  ?>
         <?= the_excerpt(); ?>
+        <a class="view-more" href="<?= esc_url(get_permalink()) ?>" rel="bookmark">View more &gt; &gt;</a>
     <?php else: ?>
         <?= the_content(); ?>
-    <?php endif;
+    <?php endif; ?>
 
+    <?php
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">Pages:</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">Page</span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>
@@ -33,8 +35,7 @@
 		<?php
 			edit_post_link(
 				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+					'Edit<span class="screen-reader-text"> "%s"</span>',
 					get_the_title()
 				),
 				'<span class="edit-link">',
