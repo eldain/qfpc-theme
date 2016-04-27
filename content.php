@@ -4,11 +4,15 @@
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
 		<?php endif; ?>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+    <?php if (is_search() || is_category()):  ?>
+      <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+    <?php else: ?>
+        <h2 class="entry-title"><?= the_title(); ?></h2>
+    <?php endif; ?>
 	</header><!-- .entry-header -->
 
   <div class="entry-content">
-    <?php if (is_search()):  ?>
+    <?php if (is_search() || is_category()):  ?>
         <?= the_excerpt(); ?>
     <?php else: ?>
         <?= the_content(); ?>
