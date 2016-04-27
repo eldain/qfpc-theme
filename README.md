@@ -7,6 +7,8 @@ This is a wordpress theme built from scratch
 * https://github.com/tlovett1/custom-contact-forms
 * https://github.com/scottsweb/instant-search-suggest
 * https://wordpress.org/plugins/categories-images/
+* https://wordpress.org/plugins/wp-theater/
+  - sudo apt-get install php5-curl
 
 ## Resources
 
