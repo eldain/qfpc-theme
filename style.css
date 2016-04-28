@@ -1,26 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
 /* https://css-tricks.com/perfect-full-page-background-image/ */
-html { 
-  background: url(images/bg.jpg) no-repeat center center fixed; 
+html {
+  background: url(images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: blur(10px);
 }
 
 body {
   background: none;
   color: white;
+  font-family: "Raleway", Arial;
 }
 
 .home-layout #title {
-  font-size: 4em;
+    font-family: Arial;
+    font-size: 4em;
 }
 
 .home-layout #description {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 40px;
 }
 
 .ccf-form-wrapper .field textarea {
   color: black;
+}
+
+.question-form{
+  font-size: 20px;
+}
+
+.category-image {
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin:auto;
+}
+
+.category-name {
+  display:block;
+  text-align: center;
+}
+
+.col-sm-6 col-sm-offset-3{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+.row{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+.question-form{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+div span{
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    font-color: white;
 }

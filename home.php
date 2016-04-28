@@ -11,16 +11,23 @@
       <?= get_template_part('searchform') ?>
     </div>
   </div>
+<div class="row">
 <?php if (function_exists('z_taxonomy_image_url')):
   $categories = get_categories();
   foreach ( $categories as $category ): ?>
-    <a href="<?= get_category_link( $category->cat_ID ); ?> ">
-      <img src="<?= z_taxonomy_image_url($category->term_id); ?>">
-      <span><?= $category->name ?></span>
-      </a><?php
+    <div class="col-sm-6">
+
+      <a href="<?= get_category_link( $category->cat_ID ); ?> ">
+        <img class="category-image" src="<?= z_taxonomy_image_url($category->term_id); ?>">
+        <span class="category-name"><?= $category->name ?></span>
+      </a>
+    </div>
+
+<?php
     endforeach;
   endif;
 ?>
+</div>
 
 <?= get_template_part('questionform') ?>
 </div>

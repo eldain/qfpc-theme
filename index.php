@@ -16,11 +16,13 @@
   <?php if ( is_category() ) : ?>
   <div class="category-header row">
     <?php if (function_exists('z_taxonomy_image_url')):
-      $category = get_the_category()[0]; ?>
-      <div class="category-image col-xs-4">
-        <img src="<?= z_taxonomy_image_url($category->term_id); ?>">
-        <div class="category-name"><?= $category->name ?></div>
-      </div>
+      //$category = get_the_category()[0];
+      $category = get_queried_object();
+ ?>
+      <div class="col-xs-4">
+        <img class="category-image" src="<?= z_taxonomy_image_url($category->term_id); ?>">
+       <div class="category-name"><?= $category->name ?></div>
+     </div>
     <?php endif; ?>
     <div class="category-description col-xs-8"><?= $category->description ?></div>
   </div>
