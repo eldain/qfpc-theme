@@ -7,11 +7,7 @@
 <?php if ( have_posts() ) : ?>
   <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
 
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 ">
-      <?= get_template_part('searchform') ?>
-    </div>
-  </div>
+  <?= get_template_part('searchform') ?>
 
   <?php if ( is_category() ) : ?>
   <div class="category-header row">
@@ -19,12 +15,12 @@
       //$category = get_the_category()[0];
       $category = get_queried_object();
  ?>
-      <div class="col-xs-4">
+      <div class="col-md-4">
         <img class="category-image" src="<?= z_taxonomy_image_url($category->term_id); ?>">
        <div class="category-name"><?= $category->name ?></div>
      </div>
     <?php endif; ?>
-    <div class="category-description col-xs-8"><?= $category->description ?></div>
+    <div class="category-description col-md-8"><?= $category->description ?></div>
   </div>
   <?php endif; ?>
 

@@ -6,11 +6,9 @@
 <div class="home-layout container">
   <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
   <div id="description"><?= bloginfo('description'); ?></div>
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 ">
-      <?= get_template_part('searchform') ?>
-    </div>
-  </div>
+
+  <?= get_template_part('searchform') ?>
+
 <div class="row">
 <?php if (function_exists('z_taxonomy_image_url')):
   $categories = get_categories();
