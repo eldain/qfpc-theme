@@ -1,98 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 /* https://css-tricks.com/perfect-full-page-background-image/ */
+
 html {
-  background: url(images/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: blur(10px);
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(10px);
 }
-
 body {
-  background: none;
-  color: white;
-  font-family: "Raleway", Arial;
+    background: none;
+    color: white;
+    font-family: "Raleway", Arial;
 }
 
-.home-layout #title {
-    font-family: Arial;
-    font-size: 4em;
+.home-layout .description {
+    text-align: center;
+    margin-bottom: .5em;
+    margin-bottom: 2.5em;
 }
-
-.home-layout #description {
-  text-align: center;
-  font-size: 40px;
-}
-
 .ccf-form-wrapper .field textarea {
-  color: black;
+    color: black;
 }
-
-.question-form{
-  font-size: 20px;
+.question-form {
+    font-size: 20px;
 }
-
 .category-image {
-    width: 200px;
-    height: 200px;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
-
 .category-name {
-    display:block;
+    display: block;
     text-align: center;
 }
-
-a.category-name:visited{
+.entry-title > a {
     font-family: Arial;
-    font-color: #fffff;
-    font-size: 60px;
-    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 1.2em;
 }
-
-.category-description{
+.category-description {
     margin-top: 40px;
-    font-color: #fffff;
+    font-color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     padding: 5px 10px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
-
-.col-sm-6 col-sm-offset-3{
+.question-form {
     margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
 }
-
-.row{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-}
-
-.question-form{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-}
-
-div span{
-    font-family: Arial;
-    font-size: 20px;
-    text-align: center;
-    font-color: white;
-}
-
 .entry-header {
-    font-color: #fffff;
+    color: #FFFFFF;
     font-size: 10px;
     font-weight: bold;
     padding: 5px 10px;
@@ -100,13 +64,8 @@ div span{
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
-.entry-title{
-    font-color: #fffff;
-    font-size: 24px;
-    font-weight: bold;
-}
-.entry-content{
-    font-color: #fffff;
+.entry-content {
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     padding: 5px 10px;
@@ -114,5 +73,47 @@ div span{
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+@media screen and (min-width:320px) {
+    .description {
+        font-size: 1em;
+    }
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media screen and (min-width:481px) {
+    .description {
+        font-size: 1.5em;
+    }
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media screen and (min-width:641px) {
+    .description {
+        font-size: 2em;
+    }
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media screen and (min-width:961px) {
+    .description {
+        font-size: 2.55em;
+    }
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media screen and (min-width:1025px) {
+    .description {
+        font-size: 2.75em;
+    }
+    /* big landscape tablets, laptops, and desktops */
+}
+@media screen and (min-width:1281px) {
+    .description {
+        font-size: 3em;
+    }
+    /* hi-res laptops and desktops */
+}
 
-
+.classWithPad {
+    padding: 5px;
+}

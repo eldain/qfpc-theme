@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-3 ">
+  <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 col-centered" style="margin-bottom: 1.5em;">
     <form role="search" method="get" class="searchform group" action="<?php echo home_url( '/' ); ?>">
       <div class="input-group">
        <input type="search" class="search-field form-control"

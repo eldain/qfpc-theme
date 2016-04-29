@@ -3,6 +3,7 @@
 <head><?= get_template_part('head'); ?></head>
 <body>
 <div class="container">
+<?= get_template_part('header') ?>
 <?#are you looking for home.php?>
 <?php if ( have_posts() ) : ?>
   <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
@@ -17,10 +18,11 @@
  ?>
       <div class="col-md-4">
         <img class="category-image" src="<?= z_taxonomy_image_url($category->term_id); ?>">
-       <div class="category-name"><?= $category->name ?></div>
+	<div class="category-name"><?= $category->name ?></div>
      </div>
     <?php endif; ?>
     <div class="category-description col-md-8"><?= $category->description ?></div>
+
   </div>
   <?php endif; ?>
 
@@ -58,8 +60,6 @@ else :
   get_template_part( 'content', 'none' );
 
 endif;
-
-get_template_part('questionform');
 ?>
 </div>
 <?= wp_footer(); ?>
