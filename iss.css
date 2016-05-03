@@ -50,9 +50,9 @@ html
 
 .iss_over
 	{
-	background: #ddd;
+	background: #39393A;
 	cursor: pointer;
-	color: #000;
+	color: #569CE6;
 	}
 
 .iss_results li:last-child,
@@ -98,7 +98,7 @@ span.iss-sub
 .iss_results li.iss-more
 	{
 	text-align: center;
-	background: #ddd;
+	background: #39393A;
 	padding: 3px;
 	}
 

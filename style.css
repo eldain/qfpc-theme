@@ -15,11 +15,18 @@ body {
     color: white;
     font-family: "Raleway", Arial;
 }
+.navLink {
+    /*border-style: solid;
+    border-radius: 5px;
+    border-color: white;*/
+    float: right;
+    margin-top: 3em;
+}
 
 .home-layout .description {
     text-align: center;
     margin-bottom: .5em;
-    margin-bottom: 2.5em;
+    margin-top: 2.5em;
 }
 .ccf-form-wrapper .field textarea {
     color: black;
@@ -27,24 +34,30 @@ body {
 .question-form {
     font-size: 20px;
 }
-.category-image {
+
+a > .category-name{
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: rgba(#CCC,.50);
+}
+
+/*.category-image {
     display: block;
     margin: auto;
-}
-.category-name {
-    display: block;
-    text-align: center;
-}
+}*/
+
 .entry-title > a {
     font-family: Arial;
     color: #FFFFFF;
     font-size: 1.2em;
 }
 .category-description {
-    margin-top: 40px;
     font-color: #FFFFFF;
     font-size: 16px;
-    font-weight: bold;
     padding: 5px 10px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -81,11 +94,39 @@ body {
     .description {
         font-size: 1em;
     }
+    .category-name {
+        font-size: 1em;
+        text-align: center;
+        display: block;
+    }
+    .category-icon{
+      float: none;
+      margin: 0 auto;
+      margin-top: 2.5em;
+    }
+  .category-description{
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
     /* smartphones, iPhone, portrait 480x320 phones */
 }
 @media screen and (min-width:481px) {
     .description {
         font-size: 1.5em;
+    }
+    .category-name {
+        font-size: 1.5em;
+    }
+    .category-icon{
+      float: none;
+      margin: 0 auto;
+      margin-top: 3em;
+    }
+    .category-description{
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 2em;
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 }
@@ -93,27 +134,104 @@ body {
     .description {
         font-size: 2em;
     }
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .category-name {
+        font-size: 2em;
+    }
+    .category-icon{
+      float: none;
+      margin: 0 auto;
+      margin-top: 4em;
+    }
+    .category-description{
+    margin-top: 2em;
+    }
+    /* portrait ta
+  blets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 }
 @media screen and (min-width:961px) {
     .description {
         font-size: 2.55em;
     }
+    .category-name {
+        font-size: 2em;
+    }
+    .category-icon{
+      float: left;
+      margin-right: 2em;
+      margin-left: 6em;
+      margin-top: 6em;
+    }
+    .category-description{
+      float: left;
+      margin: 0 auto;
+      margin-bottom: 2em;
+      margin-top: 9em;
+    }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media screen and (min-width:992px) {
+  .category-icon{
+    float: left;
+    margin-right: 2em;
+    margin-left: 12em;
+    margin-top: 6em;
+  }
+  .category-description{
+    margin-top: 8em;
+    float: left;
+  }
 }
 @media screen and (min-width:1025px) {
     .description {
         font-size: 2.75em;
     }
+    .category-name {
+        font-size: 2em;
+    }
+    .category-icon{
+      float: left;
+      margin-right: 2em;
+      margin-left: 12em;
+      margin-top: 6em;
+    }
+    .category-description{
+      margin-top: 8em;
+      float: left;
+    }
     /* big landscape tablets, laptops, and desktops */
 }
+@media screen and (min-width:1200px) {
+  .category-icon{
+    float: left;
+    margin-right: 2em;
+    margin-left: 14em;
+    margin-top: 6em;
+  }
+  .category-description{
+    margin-top: 11em;
+    float: left;
+  }
+}
+
 @media screen and (min-width:1281px) {
     .description {
         font-size: 3em;
     }
+    .category-name {
+        font-size: 2.5em;
+    }
+    .category-icon{
+      float: left;
+      margin-right: 2em;
+      margin-left: 14em;
+      margin-top: 6em;
+    }
+    .category-description{
+      margin-top: 12em;
+      float: left;
+    }
     /* hi-res laptops and desktops */
 }
-
 .classWithPad {
     padding: 5px;
 }

@@ -3,35 +3,44 @@
 <head><?= get_template_part('head'); ?></head>
 <body>
 <div class="container">
-<?= get_template_part('header') ?>
-<?#are you looking for home.php?>
-<?php if ( have_posts() ) : ?>
-  <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div>
+
+  <?= get_template_part('header') ?>
+  <?#are you looking for home.php?>
+
+  <!-- <?php if ( have_posts() ) : ?>
+    <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div> -->
 
   <?= get_template_part('searchform') ?>
 
   <?php if ( is_category() ) : ?>
-  <div class="category-header row">
-    <?php if (function_exists('z_taxonomy_image_url')):
-      //$category = get_the_category()[0];
-      $category = get_queried_object();
- ?>
-      <div class="col-md-4">
-        <img class="category-image" src="<?= z_taxonomy_image_url($category->term_id); ?>">
-	<div class="category-name"><?= $category->name ?></div>
-     </div>
-    <?php endif; ?>
-    <div class="category-description col-md-8"><?= $category->description ?></div>
+    <div class="row category-header">
 
-  </div>
+      <?php if (function_exists('z_taxonomy_image_url')):
+        //$category = get_the_category()[0];
+        $category = get_queried_object();?>
+
+        <!-- <img class="category-image col-xs-5 col-sm-4 col-md-3 col-lg-3" src="<?= z_taxonomy_image_url($category->term_id); ?>">
+        <div class="category-name"><?= $category->name ?></div> -->
+
+        <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon" style="margin-bottom: 2em;">
+            <img class="img-responsive" src="<?= z_taxonomy_image_url($category->term_id); ?>">
+            <span class="category-name"><?= $category->name ?></span>
+        </div>
+
+      <?php endif; ?>
+
+      <div class="category-description col-xs-8 col-sm-6 col-md-5 col-lg-5"><?= $category->description ?></div>
+
+    </div>
   <?php endif; ?>
+
+
 
   <?php if ( is_home() && ! is_front_page() ) : ?>
     <header>
       <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
     </header>
   <?php endif; ?>
-
 
 
   <?php
@@ -55,12 +64,12 @@
     'before_page_number' => '<span class="meta-nav screen-reader-text">' . 'Page' . ' </span>',
   ) );
 
-// If no content, include the "No posts found" template.
-else :
-  get_template_part( 'content', 'none' );
+  // If no content, include the "No posts found" template.
+  else :
+    get_template_part( 'content', 'none' );
+  endif; ?>
 
-endif;
-?>
+
 </div>
 <?= wp_footer(); ?>
 </body>
