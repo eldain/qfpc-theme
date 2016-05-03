@@ -1,1 +1,1 @@
-<?php get_template_part('questionform'); ?>
+<?php echo get_template_part('questionform'); ?>

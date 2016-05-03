@@ -5,10 +5,8 @@
 <div class="container">
 
   <?= get_template_part('header') ?>
-  <?#are you looking for home.php?>
 
-  <!-- <?php if ( have_posts() ) : ?>
-    <div id="title"><a href="/"><?= bloginfo('title'); ?></a></div> -->
+  <?php if ( have_posts() ) : ?>
 
   <?= get_template_part('searchform') ?>
 
@@ -16,11 +14,7 @@
     <div class="row category-header">
 
       <?php if (function_exists('z_taxonomy_image_url')):
-        //$category = get_the_category()[0];
         $category = get_queried_object();?>
-
-        <!-- <img class="category-image col-xs-5 col-sm-4 col-md-3 col-lg-3" src="<?= z_taxonomy_image_url($category->term_id); ?>">
-        <div class="category-name"><?= $category->name ?></div> -->
 
         <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon" style="margin-bottom: 2em;">
             <img class="img-responsive" src="<?= z_taxonomy_image_url($category->term_id); ?>">
@@ -33,7 +27,6 @@
 
     </div>
   <?php endif; ?>
-
 
 
   <?php if ( is_home() && ! is_front_page() ) : ?>
