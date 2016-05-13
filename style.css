@@ -31,9 +31,6 @@ body {
 .ccf-form-wrapper .field textarea {
     color: black;
 }
-.question-form {
-    font-size: 20px;
-}
 
 a > .category-name{
   color: white;
@@ -109,6 +106,9 @@ a:hover{
     margin: 0 auto;
     margin-bottom: 2em;
   }
+  .question-form {
+      font-size: 1.05em;
+  }
     /* smartphones, iPhone, portrait 480x320 phones */
 }
 @media screen and (min-width:481px) {
@@ -128,6 +128,9 @@ a:hover{
       margin: 0 auto;
       margin-bottom: 2em;
     }
+    .question-form {
+        font-size: 1.25em;
+    }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 }
 @media screen and (min-width:641px) {
@@ -144,6 +147,9 @@ a:hover{
     }
     .category-description{
     margin-top: 2em;
+    }
+    .question-form {
+        font-size: 1.25em;
     }
     /* portrait ta
   blets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -167,6 +173,9 @@ a:hover{
       margin-bottom: 2em;
       margin-top: 9em;
     }
+    .question-form {
+        font-size: 1.5em;
+    }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 @media screen and (min-width:992px) {
@@ -179,6 +188,9 @@ a:hover{
   .category-description{
     margin-top: 8em;
     float: left;
+  }
+  .question-form {
+      font-size: 1.5em;
   }
 }
 @media screen and (min-width:1025px) {
@@ -198,6 +210,9 @@ a:hover{
       margin-top: 8em;
       float: left;
     }
+    .question-form {
+        font-size: 1.5em;
+    }
     /* big landscape tablets, laptops, and desktops */
 }
 @media screen and (min-width:1200px) {
@@ -210,6 +225,9 @@ a:hover{
   .category-description{
     margin-top: 11em;
     float: left;
+  }
+  .question-form {
+      font-size: 2em;
   }
 }
 
@@ -230,6 +248,9 @@ a:hover{
       margin-top: 12em;
       float: left;
     }
+    .question-form {
+        font-size: 2em;
+    }
     /* hi-res laptops and desktops */
 }
 .classWithPad {
@@ -239,4 +260,8 @@ a:hover{
 article img {
   max-width: 100%;
   height: auto;
+  display: table-cell;
+  vertical-align:middle;   
+  margin: auto;
 }
+/*Able to add centering to this chunk for the article img?*/
