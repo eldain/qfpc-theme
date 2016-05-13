@@ -261,7 +261,7 @@ article img {
   max-width: 100%;
   height: auto;
   display: table-cell;
-  vertical-align:middle;   
+  vertical-align:middle;
   margin: auto;
 }
 
@@ -275,3 +275,29 @@ article img {
   opacity: 0.7;
 }
 
+.ccf-form-complete {
+  text-align: center;
+}
+
+.return-home, .centered {
+  text-align: center;
+}
+
+.return-home > a:link{
+  text-decoration: underline;
+  color: white !important;
+}
+
+.return-home > a:visited{
+  text-decoration: underline;
+  color: white !important;
+}
+
+.return-home > a:active{
+  text-decoration: underline;
+  color: white !important;
+}
+
+.return-home > a:hover{
+  color: #50ABFF !important;
+}
