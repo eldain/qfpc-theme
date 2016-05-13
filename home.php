@@ -23,7 +23,7 @@
   foreach ( $categories as $category ): ?>
 
     <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon">
-      <a href="<?= get_category_link( $category->cat_ID ); ?> ">
+      <a class="category-link" href="<?= get_category_link( $category->cat_ID ); ?> ">
         <img class="img-responsive" src="<?= z_taxonomy_image_url($category->term_id); ?>">
         <span class="category-name"><?= $category->name ?></span>
       </a>

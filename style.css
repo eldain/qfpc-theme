@@ -264,4 +264,14 @@ article img {
   vertical-align:middle;   
   margin: auto;
 }
-/*Able to add centering to this chunk for the article img?*/
+
+.category-link img {
+  padding: 10px;
+}
+
+.category-link img:hover {
+  background-color: black;
+  border-radius: 25px;
+  opacity: 0.7;
+}
+
