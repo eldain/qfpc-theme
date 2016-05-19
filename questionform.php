@@ -10,6 +10,14 @@
   }
   ?>
 
+  <script>
+  window.onload = function() {
+    var textarea = document.querySelector('#ccf_field_question');
+    textarea.value = '<?php echo get_query_var('s'); ?>';
+    textarea.focus();
+  };
+  </script>
+
 <div class="return-home">
     <a class="return-home" href="/">Return to the home page</a>
 </div>
