@@ -33,14 +33,18 @@
 
   </div>
 
-  <div class="row hidden">
+  <div class="row">
 
-    <div class="col-xs-5 col-sm-5 col-md-4 col-lg-5">
+    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon">
         <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/images/kevork.jpg" alt="Kevork in Chair" style="border-radius: 3px;"/>
     </div>
 
-    <div class="col-xs-5 col-sm-5 col-md-4 col-lg-5" style="float: right;">
-        <p>
+    <!-- <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon">
+        <img class="img-responsive col-centered" src="<?php echo get_stylesheet_directory_uri(); ?>/images/kevork2.jpg" alt="Kevork in Chair" style="border-radius: 3px;"/>
+    </div> -->
+
+    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 category-icon">
+        <p class="welcome-text">
           "Welcome to UC Irvine’s Questions about Fundamental Physics Page!
           <br><br>
           The questions posted here originate from questions on fundamental physics and cosmology that have arisen from high school instructors and undergraduate students that have not had advanced courses. The answers are meant to be sufficiently non-technical so that they should be comprehensible to a person with high-school level physics and math.
